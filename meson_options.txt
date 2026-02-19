@@ -1,0 +1,7 @@
+option(
+  'linkage',
+  type: 'combo',
+  choices: ['static', 'dynamic'],
+  value: 'static',
+  description: 'Link raylib dynamically or statically'
+)
