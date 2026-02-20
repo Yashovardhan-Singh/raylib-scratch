@@ -79,9 +79,18 @@ else
   error('Unsupported platform: ' + sys)
 endif
 
-exe = executable(
-  'main',
-  'src/main.c',
+pong = executable(
+  'pong',
+  'src/pong.c',
+  include_directories: include_directories('include'),
+  dependencies: deps,
+  link_args: link_args,
+  install_rpath: rpath,
+)
+
+shooter = executable(
+  'shooter',
+  'src/shooter.c',
   include_directories: include_directories('include'),
   dependencies: deps,
   link_args: link_args,
